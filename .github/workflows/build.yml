@@ -21,8 +21,7 @@ jobs:
       run: poetry run pytest
     - name: Bump version and tagging and publish
       run: |
+        pip install python-semantic-release
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull origin main
-        poetry run semantic-release version
-        git commit -m "Add changes" -a
+        semantic-release publish
