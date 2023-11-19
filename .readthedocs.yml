@@ -6,14 +6,8 @@ build:
   tools: 
     python: "3.8"
 python:
-  version: 3.8
-  pip_install: true
-  extra_requirements:
-    - docs
-# python:
-#   install:
-#     - method: pip
-#       path: .
-#       extra_requirements:
-#         - docs
-#     - method: pip
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - docs
