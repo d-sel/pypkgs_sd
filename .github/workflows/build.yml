@@ -19,9 +19,9 @@ jobs:
         poetry install
     - name: Test with pytest
       run: poetry run pytest
-    - name: Bump version and tagging and publish
-      run: |
-          pip install python-semantic-release
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          semantic-release publish
+    # - name: Bump version and tagging and publish
+    #   run: |
+    #       pip install python-semantic-release
+    #       git config user.name github-actions
+    #       git config user.email github-actions@github.com
+    #       semantic-release publish
